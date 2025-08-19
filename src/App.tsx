@@ -6,8 +6,8 @@ import CategoryTabs from "./components/CategoryTabs/CategoryTabs"
 import SectionTitle from "./components/SectionTitle/SectionTitle"
 import ProductCard from "./components/ProductCarousel/ProductCarousel"
 import ProductCart  from "./components/ProductCard/ProductCart"
-import BrowseBrand from "./components/browseBrands/browseBrands"
 import Newsletter from "./components/NewsletterForm/Newsletter"
+import BrowseBrand from "./components/browseBrands/BrowseBrands"
 
 function App() {
 

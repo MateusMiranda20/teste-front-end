@@ -15,7 +15,7 @@ type RelatedProductsTabsProps = {
 
 export default function RelatedProductsTabs({ activeTab, isVisible }: RelatedProductsTabsProps) {
     if (!isVisible) {
-        return null; // Não renderiza nada se isVisible for false
+        return null; 
     }
 
     return (
