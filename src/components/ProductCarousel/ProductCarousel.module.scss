@@ -1,51 +1,72 @@
-$color-bg-blue: #3442B5;
-$color-text-blue: #3442B5;
-$color-text-blackLight: #3F3F40;
+$color-bg-blue: #3442b5;
+$color-text-blue: #3442b5;
+$color-text-blackLight: #3f3f40;
 $color-text-white: #fff;
 $color-gray-border: #ccc;
 $color-text-gray: #808080;
 
-.container{
+.container {
     width: 100%;
-    height: auto;
     margin-bottom: 3rem;
+    padding: 50px;
+    position: relative;
+    overflow: visible;
 }
 
 .productCarousel {
     display: flex;
-    gap: 25px;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100%;
 }
 
 .carouselArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1.5rem;
     color: $color-text-blackLight;
     cursor: pointer;
-
     background-color: $color-text-white;
     border: 1px solid $color-gray-border;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
+
+    &.left {
+        left: 10px;
+    }
+
+    &.right {
+        right: 10px;
+    }
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .productCard {
-    flex: 0 0 auto;
-    width: 250px; // aumenta a largura (ajuste conforme precisar)
-    margin-top: 1rem;
-
+    flex: 0 0 250px;
     border: 1px solid $color-gray-border;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 15px;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
@@ -94,7 +115,7 @@ $color-text-gray: #808080;
         font-weight: 700;
     }
 
-    .productInstallments{
+    .productInstallments {
         font-size: 0.8rem;
         color: $color-text-blackLight;
         font-weight: 400;
@@ -103,11 +124,11 @@ $color-text-gray: #808080;
     .productShipping {
         font-size: 0.8rem;
         font-weight: 400;
-        color: $color-text-blue;  
+        color: $color-text-blue;
     }
 }
 
-.buyButton{
+.buyButton {
     background-color: $color-bg-blue;
     color: $color-text-white;
     border: none;
