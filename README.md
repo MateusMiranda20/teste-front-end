@@ -28,8 +28,6 @@ Uma aplicação frontend desenvolvida em **React** e **TypeScript**, com interfa
 └── .gitignore
 
 
-> **Nota:** ajuste os caminhos conforme a estrutura real do seu projeto.
-
 ---
 
 ## 🚀 Pré-requisitos
